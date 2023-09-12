@@ -1,0 +1,38 @@
+{
+  "name": "juancho",
+  "version": "0.0.1",
+  "description": "typeScript curso",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc",
+    "dev": "nodemon src/first.ts ---exec ts--node"
+  },
+  "author": "juanpablo",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.5",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/ejs": "^3.1.2",
+    "@types/mysql2": "github:types/mysql2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.0",
+    "mysql2-promise": "^0.1.4",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.0.1",
+    "path": "^0.12.7",
+    "promise": "^8.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind": "^4.0.0"
+  }
+}

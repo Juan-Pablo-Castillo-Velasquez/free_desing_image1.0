@@ -1,0 +1,81 @@
+<%- include('./partisitons/header.ejs') %>
+
+
+<form class=" text-center ">   
+  <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+  <div class="relative">
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+          </svg>
+      </div>
+      <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." required>
+      <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+  </div>
+</form>
+
+<div class="flex component-container mt-10">
+  <div class="w-2/5">
+    <img class="rounded-full" src="https://cdn.pixabay.com/photo/2018/03/30/15/11/deer-3275594_1280.jpg" alt="Descripción de la imagen" class="w-full h-auto" />
+  </div>
+  <div class="w-1/2 p-4">
+    <h1 class="text-3xl mb-10 text-pink-500 font-bold text-center">Descubre fantasticas imagenes</h1>
+<p class="text-gray-500 dark:text-gray-400">Explora la belleza de la naturaleza con esta impresionante imagen de un majestuoso ciervo en su entorno natural. Admira los detalles y la serenidad de la escena mientras te sumerges en la tranquilidad del bosque. ¡Descubre la magia de la vida salvaje con solo un vistazo!</p>
+<a  href="/" style="width: 100px;" target="_blank" class="block m-4 container mx-auto bg-pink-500 text-white py-2 px-4 rounded-full text-center hover:bg-white hover:text-black font-bold hover:">
+  Leer Más
+</a>
+  </div>
+</div>
+<!-- Botón para abrir la ventana modal -->
+
+<h1 class="text-6xl mt-20 text-white font-bold text-center">Free Image Website ❤️</h1>
+
+<!-- Modal toggle --
+
+<!-- Plantilla EJS para renderizar las tarjetas de imágenes -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-20 m-4 opacity-20 hover:transition-all duration-500 ease-out transform hover:translate-y-10 hover:opacity-80">
+  
+  <% apiData.results.forEach(image => { %>
+    <div class="relative w-full overflow-hidden rounded-lg shadow-md transition: transition-all ease-out duration-300 transform hover:scale-90 hover:translate-x-4">
+      <!-- Imagen con sombra -->
+      <img src="<%= image.urls.regular %>" alt="<%= image.alt_description %>" class="w-full h-96 object-cover" /> <!-- Ajusta 'h-96' según tu preferencia de altura -->
+
+      <!-- Detalles de la imagen -->
+      <div class="absolute inset-0 flex flex-col justify-center items-center p-4 bg-black bg-opacity-60 transition-opacity opacity-0 hover:opacity-100">
+        <!-- Likes -->
+        <div class="flex items-center text-white mb-2">
+          <img class="w-4 mr-2" src="https://cdn-icons-png.flaticon.com/512/3128/3128313.png">
+          <p><%= image.likes %> Likes</p>
+        </div>
+
+        <!-- Botón de "Leer Más" -->
+        <a href="<%= image.links.html %>" target="_blank" class="block bg-pink-500 text-white py-2 px-4 rounded-full text-center hover:bg-black font-bold hover:">
+          Leer Más
+        </a>
+      </div>
+    </div>
+  <% }); %>
+</div>
+
+      
+<div class=" w- 1/2 container mx-auto p-20">
+<div class="mt-5 border mx-5 p-10 bg-black pd-10 hover:bg-blue-700 transition-all  duration-300  ease-out  transform hover:scale-90 hover:translate-x-20">
+    
+    
+    <p class="  text-left text-white size">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, minima cupiditate iusto nobis dolores
+        distinctio exercitationem, incidunt animi magni illum est. Eaque excepturi sapiente libero quisquam aliquid?
+        Vel, accusantium repudiandae?
+    </p>
+</div>
+<div class="mt-5 border mx-5 p-10 bg-black pd10 hover:bg-red-600 text-lg transition-all duration-300 ease-out transform hover:scale-90 hover:scale hover:translate-x-20">
+    <p class="text-left text-white text-xs py-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, minima cupiditate iusto nobis dolores
+        distinctio exercitationem, incidunt animi magni illum est. Eaque excepturi sapiente libero quisquam aliquid?
+        Vel, accusantium repudiandae?
+    </p>
+</div>
+</div>
+
+</div>
+<%- include('./partisitons/fotter.ejs') %>
