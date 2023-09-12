@@ -1,7 +1,4 @@
 
-Claro, aquí tienes un archivo README.md más detallado para tu proyecto, hecho con Tailwind CSS y TypeScript:
-
-Markdown
 # Sitio web de imágenes gratuitas
 
 Este es un sitio web simple que permite a los usuarios buscar y ver imágenes gratuitas. Las imágenes son proporcionadas por Unsplash, un sitio web de fotos de archivo gratuito.
