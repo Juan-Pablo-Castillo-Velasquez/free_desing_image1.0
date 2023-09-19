@@ -1,4 +1,3 @@
-
 # Sitio web de imágenes gratuitas
 
 Este es un sitio web simple que permite a los usuarios buscar y ver imágenes gratuitas. Las imágenes son proporcionadas por Unsplash, un sitio web de fotos de archivo gratuito.
@@ -32,6 +31,7 @@ Este es un sitio web simple que permite a los usuarios buscar y ver imágenes gr
 1. Clona el repositorio de GitHub:
 
 Utiliza el código con precaución. Más información
+
 ```
 git clone https://github.com/[tu-usuario]/sitio-web-imagenes-gratis.git
 ```
@@ -44,16 +44,20 @@ npm install
 ```
 
 **Ejecución:**
-``` bash
+
+```bash
 npx tsc para convertir typescript en js
 node dist/app.js ejecutar el servidor
 ```
+
 El sitio web se abrirá en tu navegador en la dirección http://localhost:3000.
 
 ## Contribuciones
+
 Este proyecto es de código abierto y se aceptan contribuciones. Si encuentras algún error o tienes alguna sugerencia, abre un problema en GitHub.
 
 ## Licencia
+
 Este proyecto está licenciado bajo la Licencia MIT.
 
 ## Capturas de pantalla
@@ -64,7 +68,6 @@ Este proyecto está licenciado bajo la Licencia MIT.
 ![Captura de Pantalla 4](./img/example4.png)
 ![Captura de Pantalla 5](./img/example5.png)
 
-
-
 ## Créditos
+
 Juan Pablo castillo velasquez

@@ -1,9 +1,7 @@
 <%- include('./partisitons/header.ejs') %>
+<!--new--->
 
-
-<!--  componeter -->
-
-<div class="relative h-96 mb-20 bg-cover bg-center" style="background-image: url('https://cdn.pixabay.com/photo/2015/11/06/11/32/girl-1026246_1280.jpg');">
+<div class="relative h-96 mb-20 bg-cover bg-center" style="background-image: url('https://cdn.pixabay.com/photo/2014/06/04/16/36/man-362150_1280.jpg');">
   <!-- Fondo de imagen -->
   <div class="absolute inset-0 bg-black opacity-70">
   </div>
@@ -11,7 +9,7 @@
   <!-- Contenedor para el mensaje y el formulario -->
   <div class="absolute inset-0 flex flex-col items-center justify-center">
     <div class="text-white text-center mb-8">
-      <h1 class="text-4xl font-bold mb-4 hover:text-pink-100">¡Bienvenido a la sección de ropa!</h1>
+      <h1 class="text-4xl font-bold mb-4 hover:text-pink-100">¡Bienvenido a la sección de carros!</h1>
       <p class="text-lg hover:opacity-100 font-bold hover:transition-all ease-out duration-300 transform hover:translate-y-4 text-pink-500">Explora nuestras increíbles características de diseño.</p>
     </div>
 
@@ -46,23 +44,29 @@
   </form>
 </div>
 
-<!-- form-->
+<!---new--->
 
-<!--form-->
+<div class="flex justify-center items-center">
+  <!-- Centrar el contenido horizontalmente -->
+  <h1 class="text-6xl mt-20 mb-10 text-white font-bold text-center">Free <span class="text-red-700">Image</span>  car</h1>
+
+  <!-- Colocar la imagen al lado -->
+  <img src="https://th.bing.com/th/id/R.1e4cceaa1b417b0517b8fd2ed0bd1b0e?rik=vBnKx26nnnrszQ&pid=ImgRaw&r=0" width="100px" height="100px">
+</div>
 
 
-<h1 class="text-6xl mt-20 text-white font-bold text-center">Free Image Website ❤️</h1>
-
+<!-- Botón para abrir la ventana modal -->
 
 
 <!-- Modal toggle --
 
 <!-- Plantilla EJS para renderizar las tarjetas de imágenes -->
 <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-1 mt-4 opacity-20 hover:transition-all duration-500 ease-out transform hover:translate-y-10 hovgrid-cols-1 hover:opacity-100">
+  
   <% apiData.results.forEach(image => { %>
-    <div class="relative w-full overflow-hidden rounded-lg shadow-md transition: transition-all ease-out duration-300 transform hover:scale-90 hover:translate-x-4">
+    <div class="relative w-full  p-15 overflow-hidden rounded-lg shadow-md transition: transition-all ease-out duration-300 transform hover:scale-90 hover:translate-x-4">
       <!-- Imagen con sombra -->
-      <img src="<%= image.urls.regular %>" alt="<%= image.alt_description %>" class="w-full h-96 object-cover" /> <!-- Ajusta 'h-96' según tu preferencia de altura -->
+      <img src="<%= image.urls.regular %>" alt="<%= image.alt_description %>" class="w-full h-96  object-cover"  /> <!-- Ajusta 'h-96' según tu preferencia de altura -->
 
       <!-- Detalles de la imagen -->
       <div class="absolute inset-0 flex flex-col justify-center items-center p-4 bg-black bg-opacity-60 transition-opacity opacity-0 hover:opacity-100">
@@ -81,6 +85,5 @@
   <% }); %>
 </div>
 
-      
 
 <%- include('./partisitons/fotter.ejs') %>

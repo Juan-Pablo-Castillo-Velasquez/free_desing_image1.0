@@ -1,0 +1,59 @@
+<%- include('./partisitons/header.ejs') %>
+  <!-- Fondo de imagen -->
+    
+  
+  
+<!-- Plantilla EJS para renderizar las tarjetas de imágenes -->
+<h1 class="text-center text-3xl text-white font-bold"><span class="text-pink-500 font-bold">Resultados encontrados</span>  <%= perPage %></h1>
+<p class="text-white mt-10 font-bold"> <%= searchTerm1%></p>
+
+<!-- Vista 'searchResults.ejs' -->
+
+<form method="get" action="/searchModa" class="flex items-center">
+  <!-- Input oculto para perPage -->
+  <input type="hidden" name="perPage" value="<%= perPage %>">
+
+  <!-- Select de resultados por página -->
+  <div class="mr-2">
+    <label for="perPageSelect" class="block text-gray-700 text-sm font-bold mb-1">Resultados por página:</label>
+    <select name="animated" id="perPageSelect" class="w-24 px-2 py-1 border rounded focus:ring focus:ring-blue-300 focus:outline-none">
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+      <option value="200">200</option>
+    </select>
+  </div>
+
+  <!-- Input oculto para datos_img -->
+  <input type="hidden" name="datos_img" value="<%= searchTerm %>">
+
+  <!-- Botón de envío -->
+  <button class="bg-white rounded-md p-1 mt-5" type="submit">Ver</button>
+</form>
+<!-- Aquí puedes mostrar las imágenes según el contexto -->
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-1 mt-4 opacity-20 hover:transition-all duration-500 ease-out transform hover:translate-y-10 hovgrid-cols-1 hover:opacity-100">
+  <% results.forEach(image => { %>
+    <div class="relative w-full overflow-hidden rounded-lg shadow-md transition: transition-all ease-out duration-300 transform hover:scale-90 hover:translate-x-4">
+      <!-- Imagen con sombra -->
+      <img src="<%= image.urls.regular %>" alt="<%= image.alt_description %>" class="w-full h-96 object-cover" /> <!-- Ajusta 'h-96' según tu preferencia de altura -->
+
+      <!-- Detalles de la imagen -->
+      <div class="absolute inset-0 flex flex-col justify-center items-center p-4 bg-black bg-opacity-60 transition-opacity opacity-0 hover:opacity-100">
+        <!-- Likes -->
+        <div class="flex items-center text-white mb-2">
+          <img class="w-4 mr-2" src="https://cdn-icons-png.flaticon.com/512/3128/3128313.png">
+          <p><%= image.likes %> Likes</p>
+        </div>
+
+        <!-- Botón de "Leer Más" -->
+        <a href="<%= image.links.html %>" target="_blank" class="block bg-pink-500 text-white py-2 px-4 rounded-full text-center hover:bg-black font-bold hover:">
+          Leer Más
+        </a>
+      </div>
+    </div>
+  <% }); %>
+</div>
+
+<%- include('./partisitons/fotter.ejs') %>

@@ -4,3 +4,6 @@
 @import 'tailwindcss/utilities';
 
 /* Aquí puedes agregar tus propios estilos personalizados */
+body > div > div.flex.component-container.mt-10 > div.w-1\/2.p-4 > h1{
+    color:black;
+}

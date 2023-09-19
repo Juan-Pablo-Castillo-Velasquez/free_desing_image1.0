@@ -85,6 +85,28 @@
       </div>
     </div>
 </footer>
-
+<script>
+    const button = document.querySelector('[data-drawer-toggle="default-sidebar"]');
+    const sidebar = document.getElementById('default-sidebar');
+  
+    // Agrega un evento de clic al botón
+    button.addEventListener('click', () => {
+      // Toggle (alternar) la clase "hidden" en el menú lateral para mostrarlo u ocultarlo
+      sidebar.classList.toggle('hidden');
+    });    
+    const perPageSelect = document.getElementById('perPageSelect');
+    const currentPerPage = localStorage.getItem('perPage');
+  
+    // Establecer el valor seleccionado en el select si existe en el localStorage
+    if (currentPerPage) {
+      perPageSelect.value = currentPerPage;
+    }
+  
+    // Escuchar cambios en el select y guardar el valor en el localStorage
+    perPageSelect.addEventListener('change', (event) => {
+      const selectedValue = event.target.value;
+      localStorage.setItem('perPage', selectedValue);
+    });
+</script>
 </body>
 </html>

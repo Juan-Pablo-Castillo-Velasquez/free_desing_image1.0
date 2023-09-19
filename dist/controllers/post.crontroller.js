@@ -4,7 +4,7 @@ exports.getPost = void 0;
 const db_1 = require("../db");
 async function getPost(req, res) {
     const conn = await (0, db_1.connect)();
-    const post = await conn.query("SELECT * FROM patiene ");
+    const post = await conn.query("SELECT * FROM example ");
     return res.json(post[0]);
 }
 exports.getPost = getPost;
