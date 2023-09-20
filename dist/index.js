@@ -15,13 +15,14 @@ const index_controller_1 = require("./controllers/index.controller");
 const app = (0, express_1.default)();
 app.set('view cache', false);
 app.set('view engine', 'ejs');
-app.set('views', path_1.default.join(__dirname, 'views'));
+app.set('views', path_1.default.join(__dirname, '../views'));
 app.set('public', path_1.default.join(__dirname, 'public'));
 app.set("server", '3000' || "3020");
 // Middleware
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.use((0, morgan_1.default)('dev'));
 app.use(express_1.default.json());
+console.log(".");
 // ...
 // app.use(express)
 // Routes
