@@ -22,7 +22,6 @@ app.use(morgan('dev'));
 app.use(express.json());
 console.log(".")
 
-// ...
 
 // app.use(express)
 // Routes
