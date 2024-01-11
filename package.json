@@ -4,7 +4,8 @@
   "description": "typeScript curso",
   "main": "index.js",
   "scripts": {
-    "test": "tsc",
+    "start":"node  dist/index.js",
+    "build": "tsc",
     "dev": "nodemon src/first.ts ---exec ts--node"
   },
   "author": "juanpablo",
